@@ -1,0 +1,22 @@
+extends:
+  - eslint:recommended
+ecmaFeatures:
+  jsx: true
+  modules: true
+  experimentalObjectRestSpread: true
+plugins:
+  - react
+env:
+  browser: true
+  node: true
+  es6: true
+parserOptions:
+  sourceType: module
+parser: babel-eslint
+rules:
+  react/jsx-uses-react: 1
+  strict: 0
+sort-imports:
+  - error
+  - ignoreMemberSort: true
+    ignoreCase: true
