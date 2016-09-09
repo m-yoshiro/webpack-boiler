@@ -44,4 +44,3 @@ switch(TARGET) {
 }
 
 module.exports = validate(config);
-
