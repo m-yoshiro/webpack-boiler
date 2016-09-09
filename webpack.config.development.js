@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 
 let config = {
+  devtool: 'eval-source-map',
   devServer: {
     historyApiFallback: true,
     stats: 'errors-only',

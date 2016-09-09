@@ -22,7 +22,7 @@ let config;
 
 const common = {
   entry: {
-    app: PATHS.app
+    app: path.join(PATHS.app, 'App.js')
   },
   output: {
     path: PATHS.build,
