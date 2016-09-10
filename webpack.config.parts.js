@@ -14,6 +14,7 @@ exports.cssSetup = function (paths) {
     },
     postcss: function () {
       return [
+        require('postcss-nested')(),
         require('postcss-import')(),
         require('postcss-url')(),
         require('postcss-cssnext')(),

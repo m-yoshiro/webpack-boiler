@@ -6,7 +6,7 @@ import styles from './styles.css';
 class Header extends Component {
   render() {
     return (
-      <header className={ styles.root }>header</header>
+      <header className={ styles.root }><h1>header</h1></header>
     )
   }
 }

@@ -2,8 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Layout from './layouts/layout';
+import Template from './components/template';
 
 ReactDOM.render(
-  <Layout />,
+  <Template />,
   document.getElementById('App'));

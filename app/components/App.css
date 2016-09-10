@@ -1,0 +1,15 @@
+:root {
+  --fontSize: 1rem;
+}
+
+:global {
+  body {
+    box-sizing: border-box;
+    *, *::before, *::after {
+      box-sizing: inherit;
+    }
+  }
+  h1 {
+    font-size: var(--fontSize);
+  }
+}
