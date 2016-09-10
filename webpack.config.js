@@ -6,8 +6,6 @@ const merge = require('webpack-merge');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const validate = require('webpack-validator');
 
-const configDevelopment = require('./webpack.config.development');
-const configProduction = require('./webpack.config.production');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
@@ -22,7 +20,8 @@ let config;
 
 const common = {
   entry: {
-    app: path.join(PATHS.app, 'App.js')
+    app: path.join(PATHS.app, 'App.js'),
+    vendor: ['react']
   },
   output: {
     path: PATHS.build,
@@ -30,17 +29,19 @@ const common = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Test'
+      title: 'Test',
+      template: 'template.html',
+      appMountId: 'App'
     })
   ]
 };
 
 switch(TARGET) {
   case 'build':
-    config = merge(common, configProduction);
+    config = merge(common, require('./webpack.config.production'));
     break;
   default:
-    config = merge(common, configDevelopment);
+    config = merge(common, require('./webpack.config.development'));
 }
 
 module.exports = validate(config);
