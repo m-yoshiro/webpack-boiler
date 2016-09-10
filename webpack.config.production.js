@@ -1,5 +1,4 @@
 const webpack = require('webpack');
-const merge = require('webpack-merge');
 const parts = require('./webpack.config.parts');
 const path = require('path');
 const fs = require('fs');
@@ -12,7 +11,7 @@ const PATHS = {
   build: path.join(__dirname, 'build')
 };
 
-let config = merge(
+let config = Object.assign(
   {
     devtool: 'source-map',
   },

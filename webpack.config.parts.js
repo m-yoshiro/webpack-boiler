@@ -38,6 +38,7 @@ exports.babel = function (paths) {
         {
           test: /\.jsx$/,
           loaders: ['babel?cacheDirectory'],
+          exclude: /node_modules/,
           include: paths
         }
       ]
