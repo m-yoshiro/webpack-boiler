@@ -25,7 +25,7 @@ const common = {
   },
   output: {
     path: PATHS.build,
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[hash].js',
     publicPath: '/webpack-boiler/',
     chunkFilename: '[chunkhash].js'
   },

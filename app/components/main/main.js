@@ -6,7 +6,10 @@ import styles from './styles.css';
 class Main extends Component {
   render() {
     return (
-      <main className={ styles.root }>{this.props.children}</main>
+      <main className={ styles.root }>
+        <h1>{this.props.title}</h1>
+        {this.props.children}
+      </main>
     );
   }
 }
