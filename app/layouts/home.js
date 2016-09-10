@@ -1,12 +1,11 @@
 'use strict';
 
 import React, {Component} from 'react';
-import Template from '../components/template';
 
 class Home extends Component {
   render() {
     return (
-      <Template title='top' />
+      <h1>Home</h1>
     );
   }
 }

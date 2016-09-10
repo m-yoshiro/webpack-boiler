@@ -2,8 +2,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Template from './components/template';
+
+import Routes from './routes';
 
 ReactDOM.render(
-  <Template />,
-  document.getElementById('App'));
+  (<Routes />),
+  document.getElementById('App')
+);

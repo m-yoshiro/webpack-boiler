@@ -15,7 +15,9 @@ class Template extends Component {
     return (
       <div>
         <Header />
-        <Main {...this.props} />
+        <Main {...this.props}>
+          {this.props.children}
+        </Main>
         <Footer />
       </div>
     )
