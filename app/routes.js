@@ -6,6 +6,7 @@ import { Router, Route, browserHistory, IndexRoute } from 'react-router';
 import Template from './components/template';
 import Home from './layouts/home';
 import About from './layouts/about';
+import Products from './layouts/Products';
 
 class Routes extends Component {
   render() {
@@ -14,6 +15,8 @@ class Routes extends Component {
         <Route path="/" component={Template}>
           <IndexRoute component={Home}/>
           <Route path="/about" component={About}/>
+          <Route path="/products" component={Products}>
+          </Route>
         </Route>
       </Router>
     );

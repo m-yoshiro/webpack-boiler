@@ -4,6 +4,7 @@ import styles from './App.css';
 
 import React, {Component} from 'react';
 import Header from './header/header';
+import Nav from './nav/nav';
 import Footer from './footer/footer';
 import Main from './main/main';
 
@@ -15,6 +16,7 @@ class Template extends Component {
     return (
       <div>
         <Header />
+        <Nav />
         <Main {...this.props}>
           {this.props.children}
         </Main>
