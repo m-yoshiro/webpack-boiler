@@ -27,7 +27,6 @@ let config = Object.assign(
       })
     ]
   },
-  parts.babel(PATHS.app),
   parts.cssSetup()
 );
 

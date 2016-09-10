@@ -9,7 +9,7 @@ const validate = require('webpack-validator');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
-  nodeModules: path.join(__dirname, 'node_modules'),
+  nodeModules: path.resolve(__dirname, 'node_modules'),
   app: path.join(__dirname, 'app'),
   server: path.join(__dirname, 'app', 'server.js'),
   style: path.join(__dirname, 'app', 'styles'),
@@ -26,6 +26,16 @@ const common = {
   output: {
     path: PATHS.build,
     filename: '[name].js'
+  },
+  module: {
+    loaders: [
+      {
+        test: /\.jsx?$/,
+        loaders: ['babel?cacheDirectory=true'],
+        exclude: PATHS.nodeModules,
+        include: PATHS.app
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
