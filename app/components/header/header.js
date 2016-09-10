@@ -1,11 +1,12 @@
+'use strict';
+
 import React, {Component} from 'react';
-// import styles from './header.css';
+import styles from './styles.css';
 
 class Header extends Component {
   render() {
     return (
-      // <header className={ styles.root }>header</header>
-      <header >header</header>
+      <header className={ styles.root }>header</header>
     )
   }
 }

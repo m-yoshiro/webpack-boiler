@@ -7,7 +7,7 @@ exports.cssSetup = function (paths) {
       loaders: [
         {
           test: /\.css$/,
-          loader: ExtractTextPlugin.extract('style!css?modules&importLoaders=1!postcss'),
+          loader: ExtractTextPlugin.extract('css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]!postcss'),
           include: paths
         }
       ]
@@ -18,7 +18,10 @@ exports.cssSetup = function (paths) {
         require('postcss-url')(),
         require('postcss-cssnext')(),
       ]
-    }
+    },
+    plugins: [
+      new ExtractTextPlugin("styles.css")
+    ]
   };
 }
 
