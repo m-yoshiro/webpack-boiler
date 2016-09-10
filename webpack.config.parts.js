@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 exports.cssSetup = function (paths) {
   return {
@@ -6,7 +7,7 @@ exports.cssSetup = function (paths) {
       loaders: [
         {
           test: /\.css$/,
-          loader: 'style!css?modules&importLoaders=1!postcss',
+          loader: ExtractTextPlugin.extract('style!css?modules&importLoaders=1!postcss'),
           include: paths
         }
       ]
