@@ -27,16 +27,6 @@ const common = {
     path: PATHS.build,
     filename: '[name].js'
   },
-  module: {
-    loaders: [
-      {
-        test: /\.jsx?$/,
-        loaders: ['babel?cacheDirectory=true'],
-        exclude: PATHS.nodeModules,
-        include: PATHS.app
-      }
-    ]
-  },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Test',

@@ -27,7 +27,8 @@ let config = Object.assign(
       })
     ]
   },
-  parts.cssSetup()
+  parts.cssSetup(),
+  parts.babel(PATHS.app)
 );
 
 module.exports = config;
