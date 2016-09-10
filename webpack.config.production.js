@@ -16,14 +16,23 @@ let config = merge(
   {
     devtool: 'source-map',
     output: {
+      filename: '[name].[chunkhash].js',
       publicPath: '/webpack-boiler/',
       chunkFilename: '[chunkhash].js'
-    }
+    },
+    plugins: [
+      new webpack.optimize.DedupePlugin(),
+      new webpack.optimize.OccurrenceOrderPlugin()
+    ]
   },
   parts.setFreeVariable(
     'process.env.NODE_ENV',
     'production'
   ),
+  parts.extractBundle({
+    name: 'vendor',
+    entries: ['react']
+  }),
   parts.babel(PATHS.app),
   parts.minify(),
   parts.cssSetup(PATHS.app)

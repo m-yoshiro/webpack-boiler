@@ -20,12 +20,11 @@ let config;
 
 const common = {
   entry: {
-    app: path.join(PATHS.app, 'App.js'),
-    vendor: ['react']
+    app: path.join(PATHS.app, 'App.js')
   },
   output: {
     path: PATHS.build,
-    filename: '[name].[hash].js'
+    filename: '[name].js'
   },
   plugins: [
     new HtmlWebpackPlugin({

@@ -62,3 +62,18 @@ exports.minify = function () {
     ]
   };
 }
+
+exports.extractBundle = function (options) {
+  const entry = {};
+  entry[options.name] = options.entries;
+
+  return {
+    entry: entry,
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        names: [options.name, 'manifest'],
+        minChunks: Infinity
+      })
+    ]
+  };
+}
