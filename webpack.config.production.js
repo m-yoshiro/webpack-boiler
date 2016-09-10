@@ -15,11 +15,11 @@ const PATHS = {
 let config = merge(
   {
     devtool: 'source-map',
+    output: {
+      publicPath: '/webpack-boiler/',
+      chunkFilename: '[chunkhash].js'
+    }
   },
-  output: [
-    publicPath: '/webpack-boiler/',
-    chunkFilename: '[chunkhash].js'
-  ],
   parts.setFreeVariable(
     'process.env.NODE_ENV',
     'production'
