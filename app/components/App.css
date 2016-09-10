@@ -1,15 +1,16 @@
-:root {
-  --fontSize: 1rem;
-}
+@import './shared/styles/colors.css';
+@import './shared/styles/typography.css';
 
-:global {
-  body {
-    box-sizing: border-box;
-    *, *::before, *::after {
-      box-sizing: inherit;
-    }
+body {
+  box-sizing: border-box;
+  *, *::before, *::after {
+    box-sizing: inherit;
   }
-  h1 {
-    font-size: var(--fontSize);
-  }
+
+  background-color: var(--colorMain);
+
+  font-size: calc(var(--fontSize) * 2);
+  color: var(--colorText);
+  padding: 0;
+  margin: 0;
 }
