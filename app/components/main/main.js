@@ -7,7 +7,6 @@ class Main extends Component {
   render() {
     return (
       <main className={ styles.root }>
-        <h1>{this.props.title}</h1>
         {this.props.children}
       </main>
     );

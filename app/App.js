@@ -1,12 +1,19 @@
 'use strict';
 
-import React from 'react';
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
-import { Router, browserHistory } from 'react-router';
 
-import routes from './routes';
+import Template from './components/template';
+import Products from './layouts/products';
 
-ReactDOM.render(
-  <Router routes={routes} history={browserHistory} />,
-  document.getElementById('App')
-);
+class App extends Component {
+  render() {
+    return (
+      <Template>
+        <Products />
+      </Template>
+    );
+  }
+}
+
+export default App

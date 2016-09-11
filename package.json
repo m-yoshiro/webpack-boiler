@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "rm -rf build && webpack --progress && npm run build:server",
-    "build:server": "webpack --config webpack.config.server.js",
+    "build": "rm -rf build && webpack --progress",
     "deploy": "gh-pages -d build",
     "stats": "webpack --profile --json > stats.json",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -30,6 +29,7 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "gh-pages": "^0.11.0",
     "html-webpack-plugin": "^2.22.0",
+    "markdown-loader": "^0.1.7",
     "postcss-cssnext": "^2.8.0",
     "postcss-import": "^8.1.2",
     "postcss-loader": "^0.13.0",
@@ -37,6 +37,7 @@
     "postcss-url": "^5.1.2",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
+    "static-site-generator-webpack-plugin": "^3.0.0",
     "style-loader": "^0.13.1",
     "stylelint": "^7.2.0",
     "webpack": "^1.13.2",

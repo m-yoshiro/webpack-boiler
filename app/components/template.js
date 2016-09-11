@@ -16,11 +16,6 @@ class Template extends Component {
     return (
       <div>
         <Header />
-        <Nav links={[
-          {path: '/', name: '/'},
-          {path: '/about', name: 'About'},
-          {path: '/products', name: 'Products'},
-        ]} />
         <Main {...this.props}>
           {this.props.children}
         </Main>

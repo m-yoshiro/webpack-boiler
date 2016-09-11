@@ -1,13 +1,12 @@
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-const parts = require('./webpack.config.parts');
 const path = require('path');
 const fs = require('fs');
+const parts = require('./webpack.config.parts');
 
 const PATHS = {
   nodeModules: path.join(__dirname, 'node_modules'),
   app: path.join(__dirname, 'app'),
-  server: path.join(__dirname, 'app', 'server.js'),
   style: path.join(__dirname, 'app', 'styles'),
   build: path.join(__dirname, 'build')
 };
@@ -19,11 +18,7 @@ let config = merge(
       filename: '[name].[chunkhash].js',
       publicPath: '/webpack-boiler/',
       chunkFilename: '[chunkhash].js'
-    },
-    plugins: [
-      new webpack.optimize.DedupePlugin(),
-      new webpack.optimize.OccurrenceOrderPlugin()
-    ]
+    }
   },
   parts.setFreeVariable(
     'process.env.NODE_ENV',

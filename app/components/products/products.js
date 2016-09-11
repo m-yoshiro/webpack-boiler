@@ -2,12 +2,11 @@
 
 import React, {Component} from 'react';
 import styles from './styles.css';
-import ProductsList from './products-list/products-list';
+import ProductsList from './productsList/productsList';
 
 class Products extends Component {
   render() {
     return (
-      <p>テスト記事です</p>
       <ul>
         <li>
           <ProductList></ProductList>

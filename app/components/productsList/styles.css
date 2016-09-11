@@ -1,0 +1,13 @@
+.products__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products__item {
+  flex-basis: calc(50% - 2rem);
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-color: #fff;
+  margin: 1rem;
+  padding: 1rem;
+}
