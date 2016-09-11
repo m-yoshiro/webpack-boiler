@@ -13,7 +13,7 @@ class Nav extends Component {
       <nav>
         <ul role="nav">{
           this.props.links.map((link) =>
-            <li><Link to={link.path} >{link.name}</Link></li>
+            <li><Link to={link.path} activeClassName="active" >{link.name}</Link></li>
           )
         }</ul>
       </nav>

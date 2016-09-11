@@ -11,7 +11,6 @@ const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
   nodeModules: path.resolve(__dirname, 'node_modules'),
   app: path.join(__dirname, 'app'),
-  server: path.join(__dirname, 'app', 'server.js'),
   style: path.join(__dirname, 'app', 'styles'),
   build: path.join(__dirname, 'build')
 };
