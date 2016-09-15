@@ -1,16 +1,20 @@
 @import './shared/styles/colors.css';
 @import './shared/styles/typography.css';
+@import './shared/styles/base.css';
+@import './shared/styles/posts/idea01.css';
+@import './shared/styles/posts/idea02.css';
+@import './shared/styles/posts/idea03.css';
+@import './shared/styles/posts/idea04.css';
+@import './shared/styles/posts/idea05.css';
 
-body {
-  box-sizing: border-box;
-  *, *::before, *::after {
-    box-sizing: inherit;
+:global {
+  .wrapper {
+    margin: 0 2rem 2rem;
+    padding: 2rem;
+    background-color: var(--colorPanel);
   }
-
-  background-color: var(--colorMain);
-
-  font-size: calc(var(--fontSize) * 2);
-  color: var(--colorText);
-  padding: 0;
-  margin: 0;
+  .content-wrapper {
+    padding: 1.5rem;
+    border: 2px solid var(--colorGray);
+  }
 }

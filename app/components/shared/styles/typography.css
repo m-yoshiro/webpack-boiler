@@ -9,5 +9,11 @@
 }
 
 h1 {
-  font-size: calc(var(--fontSize) * 2);
+  font-size: calc(var(--fontSize) * 1.8);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+h2 {
+  font-size: calc(var(--fontSize) * 1.5);
+  margin-bottom: 1.5rem;
 }

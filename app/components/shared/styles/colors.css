@@ -1,4 +1,6 @@
 :root {
-  --colorMain: hsl(210, 69%, 44%);
+  --colorMain: hsl(0, 0%, 85%);
+  --colorPanel: hsl(0, 0%, 100%);
   --colorText: hsl(0, 0%, 30%);
+  --colorGray: hsl(0, 0%, 60%);
 }

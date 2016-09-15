@@ -14,8 +14,22 @@ exports.cssSetup = function (paths) {
     },
     postcss: function () {
       return [
-        require('postcss-nested')(),
         require('postcss-import')(),
+        require('precss')(),
+        require('postcss-animation')(),
+        require('postcss-nested')(),
+        require('postcss-at-rules-variables')(),
+        require('postcss-custom-properties')(),
+        require('postcss-each')({
+          plugins: {
+            afterEach: [
+              require('postcss-at-rules-variables')
+            ],
+            beforeEach: [
+              require('postcss-custom-properties')
+            ]
+          }
+        }),
         require('postcss-url')(),
         require('postcss-cssnext')(),
       ]

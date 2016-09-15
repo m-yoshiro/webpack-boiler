@@ -8,6 +8,7 @@ import Nav from './nav/nav';
 import Footer from './footer/footer';
 import Main from './main/main';
 
+
 class Template extends Component {
   constructor(props) {
     super(props);

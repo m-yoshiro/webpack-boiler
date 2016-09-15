@@ -1,0 +1,30 @@
+:global {
+  .text {
+    cursor: zoom-in;
+    position: relative;
+  }
+  .zoom-wrapper {
+    position: relative;
+  }
+  .js-glass {
+    position: relative;
+  }
+  .js-glass-text {
+    position: absolute;
+    width: 50vw;
+    left: 0;
+    transform: scale(1.5);
+    transform-origin: top left;
+  }
+  .js-glass-copy {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid hsl(0, 0%, 70%);
+    background: #FFF;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+  }
+}

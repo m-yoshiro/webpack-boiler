@@ -1,0 +1,71 @@
+@keyframes :global(active) {
+  to {
+    background-color: hsl(0, 78%, 60%);
+  }
+}
+
+@keyframes :global(hold) {
+  to {
+    background-color: hsl(145, 96%, 56%);
+    animation: active 0.8s;
+  }
+}
+
+@keyframes :global(show) {
+  to {
+    visibility: visible;
+    transform: scale(1.2);
+  }
+}
+
+:global {
+  @custom-selector :--button .button--anim--style;
+
+  .buttons {
+    position: relative;
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+  .button {
+    position: relative;
+    color: #fff;
+    padding: 0.7em 1em;
+    margin-bottom: 2rem;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .button--anim--style {
+    background-color: hsl(180, 100%, 30%);
+    position: relative;
+    transition: background-color 0.5s;
+    &:active {
+      background-color: hsla(180, 65%, 47%, 1);
+    }
+  }
+
+  .button--active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 50% 50%;
+    max-width: 20rem;
+    visibility: hidden;
+    margin: 0;
+  }
+
+  .button--anim--style:active {
+    animation: hold 0.2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    ~ .button--active {
+      animation: show 0.2s;
+      animation-delay: 0.5s;
+      animation-fill-mode: forwards;
+    }
+  }
+
+
+}

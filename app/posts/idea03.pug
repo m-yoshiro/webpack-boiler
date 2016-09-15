@@ -1,0 +1,11 @@
+- categories = ['banana', 'apple', 'susi'];
+
+.wrapper
+  h1 パネル型のカテゴライズ支援
+  .content-wrapper
+    .panels
+      - for(var i=0; i <= 19; i++ )
+        - randomId = Math.floor(Math.random(1)*10)%3;
+        - category = categories[randomId];
+        .panel.js-panel(data-category=category)
+          | #{category}

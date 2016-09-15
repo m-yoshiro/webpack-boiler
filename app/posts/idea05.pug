@@ -1,0 +1,10 @@
+.wrapper
+  h1 プチプチ
+  .content-wrapper
+    .puchi-wrapper
+      button.button.button--puchi.js-reset
+        | RESET
+      .puchies
+        - for (var i = 0; i <= 49; i++)
+          .puchies__cell
+            i.puchies__puchi

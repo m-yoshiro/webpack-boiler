@@ -1,0 +1,59 @@
+:global {
+  .reset {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  .puchi-wrapper {
+    background-color: hsl(200, 90%, 40%);
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .puchies {
+    margin: 0 4rem 1rem;
+    background-color: hsla(0, 0%, 100%, .2);
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    padding: 1rem;
+    border-radius: 0.35em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &__cell {
+      flex-basis: calc(40rem / 9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5em;
+    }
+    &__puchi {
+      cursor: crosshair;
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      background: linear-gradient(to bottom left, hsla(0,0%,100%,.4) 0, transparent 100%);
+      border-radius: 50%;
+      box-shadow: 0.1em 0.1em 0.2em hsla(240, 38%, 18%, 0.07), inset 0.1em 0.1em 0.3em hsla(0, 0%, 100%, .1);
+      transition-propaty: background-color;
+      transition-duration: .2s;
+      &:not(.puchies__puchi--pressed) {
+        &:hover {
+          background-color: hsla(0, 0, 100%, .3);
+        }
+        &:active {
+          background-color: hsla(200, 60%, 20%, .3);
+          box-shadow: 0 0.1em 0.7em hsla(240, 38%, 18%, 0.07), 0 0.8em 2em hsla(199, 100%, 28%, 0.1),
+            inset 0.1em 0.1em 0.6em hsla(0, 0%, 100%, .4);
+          transform: scale(1.1);
+        }
+      }
+    }
+    &__puchi--pressed {
+      background: hsl(200, 90%, 40%);
+    }
+  }
+  .button--puchi {
+    background-color: hsl(194, 100%, 43%);
+  }
+}
