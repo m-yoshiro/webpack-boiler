@@ -29,6 +29,10 @@ const common = {
         test: /\.md$/,
         loader: "html!markdown?gfm=false"
       },
+      {
+        test: /\.pug$/,
+        loader: "pug"
+      },
     ]
   },
   plugins: [
