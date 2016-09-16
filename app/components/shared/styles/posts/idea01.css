@@ -29,4 +29,19 @@
       margin-top: 0.5rem;
     }
   }
+
+  .button-textSelector {
+    background: hsl(40, 98%, 50%);
+    position: relative;
+    &[data-mode-input="false"] {
+      &::before {
+        content: 'pick words';
+        position: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        display: block;
+        background: hsl(180, 100%, 30%);
+        padding: inherit;
+      }
+    }
+  }
 }

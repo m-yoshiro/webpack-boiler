@@ -57,8 +57,6 @@ class TextSelector {
           tag.textContent = text;
           this.container.appendChild(tag);
         }
-
-
       }
     }, false);
   }
@@ -90,6 +88,7 @@ class TextSelector {
     this.changer.addEventListener('click', (e) => {
       e.preventDefault();
       this.state.isModeInput = this.state.isModeInput ? false : true;
+      e.target.dataset.modeInput = this.state.isModeInput;
     }, false);
   }
 }
