@@ -23,8 +23,11 @@
 
   .buttons {
     position: relative;
-    width: 20rem;
+    width: auto;
     margin: 0 auto;
+    @media only screen and (min-width: 48em){
+      width: 20rem;
+    }
   }
 
   .button {

@@ -8,11 +8,10 @@
   }
   .puchi-wrapper {
     background-color: hsl(200, 90%, 40%);
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 1rem;
   }
   .puchies {
-    margin: 0 4rem 1rem;
+    margin: 0 auto 1rem;
     background-color: hsla(0, 0%, 100%, .2);
     border: 1px solid hsla(0, 0%, 100%, .1);
     padding: 1rem;
@@ -20,8 +19,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media only screen and (min-width: 48em){
+      margin: 0 4rem 1rem;
+    }
     &__cell {
-      flex-basis: calc(40rem / 9);
+      flex-basis: calc(100% / 9);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -55,5 +57,9 @@
   }
   .button--puchi {
     background-color: hsl(194, 100%, 43%);
+    margin: 1rem auto 2rem;
+    @media only screen and (min-width: 48em){
+      margin-top: 2rem;
+    }
   }
 }

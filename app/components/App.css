@@ -9,12 +9,19 @@
 
 :global {
   .wrapper {
-    margin: 0 2rem 2rem;
-    padding: 2rem;
+    margin: 0 1rem 1rem;
+    padding: 1rem;
     background-color: var(--colorPanel);
+    @media only screen and (min-width: 48em){
+      margin: 0 2rem 2rem;
+      padding: 2rem;
+    }
   }
   .content-wrapper {
-    padding: 1.5rem;
+    padding: 1rem;
     border: 2px solid var(--colorGray);
+    @media only screen and (min-width: 48em){
+      padding: 1.5rem;
+    }
   }
 }
